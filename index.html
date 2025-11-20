@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peekaboo Cartoon - Johny Johny Yes Papa</title>
+    <meta name="description" content="Generate a video of a peekaboo cartoon character singing Johny Johny Yes Papa. Play and download as WebM." />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Peekaboo Cartoon</h1>
+        <p class="subtitle">Johny Johny Yes Papa ? generate a cute sing-along video</p>
+      </header>
+
+      <section class="stage">
+        <canvas id="stage" width="1280" height="720" aria-label="Peekaboo Cartoon Canvas"></canvas>
+        <div id="subtitles" class="subtitles" aria-live="polite"></div>
+      </section>
+
+      <section class="controls">
+        <button id="startBtn" class="btn primary">Start Performance</button>
+        <button id="recordBtn" class="btn" disabled>Generate Video</button>
+        <button id="downloadBtn" class="btn" disabled>Download Video</button>
+      </section>
+
+      <section id="output" class="output" hidden>
+        <video id="preview" controls playsinline></video>
+      </section>
+
+      <footer class="footer">
+        <p>
+          Built for the web. All animation and audio are generated in your browser.
+        </p>
+      </footer>
+    </main>
+
+    <script src="/script.js" type="module"></script>
+  </body>
+</html>
+

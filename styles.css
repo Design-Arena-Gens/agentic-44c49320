@@ -1,0 +1,125 @@
+:root {
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --accent: #7c3aed;
+  --accent-2: #06b6d4;
+  --btn: #111827;
+  --btn-text: #ffffff;
+  --green: #22c55e;
+  --red: #ef4444;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Fredoka", system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 15% -10%, #e0f2fe, transparent),
+              radial-gradient(1000px 700px at 110% 0%, #fef3c7, transparent),
+              var(--bg);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.header h1 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.subtitle {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.stage {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #c7f9cc 0%, #a9def9 100%);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.08), inset 0 0 0 1px rgba(2,6,23,0.05);
+}
+canvas#stage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.subtitles {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #111827;
+  text-shadow: 0 2px 6px rgba(255,255,255,0.8);
+  mix-blend-mode: luminosity;
+  padding: 0 16px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding: 16px 0 8px;
+}
+.btn {
+  background: var(--btn);
+  color: var(--btn-text);
+  border: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.15s ease, background 0.2s ease;
+  box-shadow: 0 6px 14px rgba(2,6,23,0.15), inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+.btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.btn.primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.output {
+  display: grid;
+  gap: 12px;
+  padding: 12px 0 0;
+}
+.output video {
+  width: 100%;
+  max-height: 420px;
+  background: #000;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(2,6,23,0.12);
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  padding-top: 12px;
+}
+
